@@ -1,0 +1,486 @@
+html {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+}
+
+body {
+    width: 100%;
+    height: 50%;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+
+    --background-color: hsl(236, 33%, 92%);
+    --text-color: hsl(235, 19%, 35%);
+    --card-background-color: hsl(0, 0%, 100%);
+    --text-hover: hsl(235, 11%, 24%);
+    --button-bg-img: url("./images/icon-moon.svg");
+    --header-bg-img: url("./images/bg-desktop-light.jpg");
+
+    --title-color: #fff;
+
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+
+body.dark {
+    --background-color: hsl(235, 21%, 11%);
+    --text-color: hsl(234, 39%, 85%);
+    --card-background-color: hsl(228, 28%, 20%);
+    --text-hover: hsl(236, 33%, 92%);
+    --button-bg-img: url("./images/icon-sun.svg");
+    --header-bg-img: url("./images/bg-desktop-dark.jpg");
+    --card-color: hsl(235, 24%, 19%);
+    --card-text-color: hsl(228, 34%, 66%);
+}
+
+header {
+    margin-top: 0px;
+    padding-top: 0;
+    width: 100%;
+    height: 350px;
+    background: var(--header-bg-img) 50% 0% / 100% no-repeat fixed;
+    margin-bottom: -16%;
+}
+
+
+header>button {
+    height: 26px;
+    width: 26px;
+    background-color: transparent;
+    border: transparent;
+    background: var(--button-bg-img) no-repeat;
+    margin-top: 140px;
+    margin-left: 67%;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+.container {
+    width: 60%;
+    margin-top: 5%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.container>h1 {
+    padding: 20px;
+    color: var(--title-color);
+    font-size: xx-large;
+}
+
+.container>p {
+    color: hsl(236, 9%, 61%);
+    margin-left: 25%;
+}
+
+.list {
+    width: 65%;
+    padding: 5px;
+    margin-top: 30px;
+    border-radius: 5px;
+    box-shadow: 2px;
+    background-color: var(--card-background-color);
+
+    -webkit-box-shadow: -7px 12px 31px -18px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: -7px 12px 31px -18px rgba(0, 0, 0, 0.45);
+    box-shadow: -7px 12px 31px -18px rgba(0, 0, 0, 0.45);
+}
+
+.list>input {
+    color: var(--text-color);
+}
+
+.list>p>input {
+    display: inline-block;
+}
+
+.bottomList {
+    display: inline-block;
+}
+
+.choice {
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-top: solid lightgray 1px;
+}
+
+.choice>a {
+    color: var(--text-color);
+    margin: 10px;
+    display: inline-block;
+}
+
+.choice>a:hover,
+.choice>div>a:hover {
+    color: var(--text-hover)
+}
+
+.choice>div {
+    display: inline-block;
+    text-decoration-line: none;
+}
+
+.choice>div>a {
+    color: var(--text-color);
+    text-decoration-line: none;
+}
+
+
+.list input[type='text'] {
+    width: 80%;
+    height: 25px;
+    margin-left: 20px;
+    border-radius: 5px;
+    border: 0px;
+    background-color: var(--card-background-color);
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    margin-left: 15px;
+    position: relative;
+    content: '';
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+
+}
+
+input[type='checkbox']:checked+label {
+    text-decoration: line-through;
+}
+
+input[type='checkbox']:not(:checked)+label {
+    text-decoration: none;
+}
+
+input[type='checkbox']:checked+label::before {
+
+    position: relative;
+    text-align: center;
+    content: '✔';
+    color: #fff;
+    background: linear-gradient(#57DDFF, #C058F3);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.todorow input[type='checkbox'] {
+    visibility: hidden;
+
+}
+
+.todorow label {
+    margin: 5px;
+}
+
+.todorow label::before {
+    text-align: center;
+    position: relative;
+    content: '';
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+}
+
+.todorow input,
+label,
+img {
+    cursor: move;
+    display: inline-block;
+    margin: auto;
+}
+
+#itemVal {
+    display: inline;
+}
+
+#listedTodo>div>img {
+    visibility: hidden;
+}
+
+#listedTodo>div:hover img {
+    visibility: visible;
+}
+
+.selected {
+    text-decoration: none;
+    color: hsl(220, 98%, 61%) !important;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+@media all and (min-width: 1024px) and (max-width: 1980px) {
+
+    header {
+        width: 100%;
+        height: 350px;
+        background: var(--header-bg-img) 50% 0% / 100% no-repeat fixed;
+        margin-bottom: -16%;
+    }
+
+
+    header>button {
+        height: 26px;
+        width: 26px;
+
+        margin-top: 140px;
+        margin-left: 67%;
+    }
+
+    .container {
+        width: 60%;
+        margin-top: 5%;
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+
+    .container>h1 {
+        padding: 20px;
+    }
+
+    .container>p {
+        margin-left: 25%;
+    }
+
+    .list {
+        width: 65%;
+        padding: 5px;
+        margin-top: 30px;
+    }
+
+    .choice {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .choice>p {
+        margin: 10px;
+    }
+
+
+    input[type='text'] {
+        width: 80%;
+        height: 25px;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+
+    input[type='radio'] {
+        margin-top: 15px;
+    }
+
+
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+
+    header {
+        width: 100%;
+        height: 250px;
+        background: var(--header-bg-img) 100% 0% / 100% no-repeat fixed;
+        margin-bottom: -20%;
+    }
+
+
+    header>button {
+        height: 26px;
+        width: 26px;
+
+        margin-top: 140px;
+        margin-left: 67%;
+    }
+
+    .container {
+        width: 80%;
+        margin-top: 5%;
+        margin-left: 20%;
+    }
+
+    .container>h1 {
+        padding: 10px;
+    }
+
+    .container>p {
+        margin-left: 5%;
+    }
+
+    .list {
+        width: 70%;
+        padding: 5px;
+        margin-top: 30px;
+
+    }
+
+    .choice {
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+
+    .choice>p {
+        margin: 5px;
+    }
+
+
+    input[type='text'],
+    label {
+        width: 60%;
+        height: 15px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 5px;
+    }
+
+    input[type='checkbox'] {
+
+        margin-top: 15px;
+    }
+
+
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+    header {
+        width: 100%;
+        height: 150px;
+        background: var(--header-bg-img) 100% 0% / 100% no-repeat fixed;
+        margin-bottom: -20%;
+    }
+
+
+    header>button {
+        height: 26px;
+        width: 26px;
+
+        margin-top: 75px;
+        margin-left: 67%;
+    }
+
+    .container {
+        width: 80%;
+        margin-top: 5%;
+        margin-left: 20%;
+    }
+
+    .container>h1 {
+        padding: 10px;
+    }
+
+    .container>p {
+        margin-left: 5%;
+    }
+
+    .list {
+        width: 70%;
+        padding: 5px;
+        margin-top: 30px;
+    }
+
+    .choice {
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+
+    .choice>p {
+        margin: 5px;
+    }
+
+
+    input[type='text'],
+    label {
+        width: 60%;
+        height: 15px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 5px;
+    }
+
+}
+
+
+@media all and (max-width: 480px) {
+
+    header {
+        width: 100%;
+        height: 50px;
+        background: var(--header-bg-img) 100% 0% / 100% no-repeat fixed;
+        margin-bottom: -20%;
+    }
+
+
+    header>button {
+        height: 26px auto;
+        width: 26px auto;
+
+        margin-top: 15px;
+        margin-left: 67%;
+    }
+
+    .container {
+        width: 90%;
+        margin-left: 10%;
+    }
+
+    .container>h1 {
+        padding: 5px;
+    }
+
+    .container>p {
+        margin-left: 5%;
+    }
+
+    .list {
+        width: 90%;
+        padding: 5px;
+        margin-top: 30px;
+
+    }
+
+    .choice {
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+
+    .choice>p {
+        margin: 5px;
+    }
+
+
+    input[type='text'],
+    label {
+        width: 60%;
+        height: 15px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 5px;
+    }
+
+    input[type='radio'] {
+        margin-top: 15px;
+        display: inline-block;
+    }
+
+}
